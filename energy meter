@@ -1,0 +1,20 @@
+protected static WhatsApp Instance;
+
+private static void Main(string[] args)
+{
+    ...
+    Instance = new energy meter(sender, password, true);
+    ...
+    Thread t = new Thread(new ThreadStart(KeepAlive));
+    t.IsBackground = true;
+    t.Start();
+}
+
+protected static void KeepAlive()
+{
+    while (true)
+    {
+        Thread.Sleep(90000);
+        Instance.SendGetPrivacySettings();
+    }
+}
